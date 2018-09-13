@@ -38,6 +38,12 @@ sudo apt-get update
 sudo apt-get install code # or code-insiders
 ```
 
+If you are using Ubuntu Bionic, you may need to add the universe repository and missing package dependencies to install code: 
+```bash
+sudo apt-get install software-properties-common libasound2 libxss1
+sudo add-apt-repository universe
+```
+
 ### RHEL, Fedora and CentOS based distributions
 
 We currently ship the stable 64-bit VS Code in a yum repository, the following script will install the key and repository:
