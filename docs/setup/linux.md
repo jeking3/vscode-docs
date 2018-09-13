@@ -30,6 +30,12 @@ sudo install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/
 sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
 ```
 
+If you are using Ubuntu Bionic, add the universe repository and missing package dependencies:
+```bash
+sudo apt-get install software-properties-common libasound2 libxss1
+sudo add-apt-repository universe
+```
+
 Then update the package cache and install the package using:
 
 ```bash
